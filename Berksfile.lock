@@ -1,0 +1,35 @@
+DEPENDENCIES
+  hostsfile (= 0.1.1)
+  spark_on_yarn_cookbook
+    path: spark_on_yarn_cookbook
+  test_setup
+    path: test_setup
+
+GRAPH
+  apt (7.0.0)
+  dpkg_autostart (0.2.0)
+  hadoop (2.13.0)
+    apt (>= 2.1.2)
+    dpkg_autostart (>= 0.0.0)
+    selinux (>= 0.0.0)
+    sysctl (>= 0.0.0)
+    ulimit (>= 0.0.0)
+    yum (>= 3.0)
+  homebrew (5.0.4)
+  hostsfile (0.1.1)
+  java (1.45.0)
+    apt (>= 0.0.0)
+    homebrew (>= 0.0.0)
+    windows (>= 0.0.0)
+  ohai (5.2.2)
+  selinux (2.1.0)
+  spark_on_yarn_cookbook (0.1.0)
+    hadoop (~> 2.13.0)
+    java (= 1.45.0)
+  sysctl (1.0.5)
+    ohai (>= 5.0)
+  test_setup (0.1.0)
+    hostsfile (>= 0.0.0)
+  ulimit (1.0.0)
+  windows (4.2.2)
+  yum (5.1.0)

@@ -1,0 +1,19 @@
+[Unit]
+Description=yarn resourcemanager service
+Requires=network.target
+After=network.target
+
+[Service]
+Type=simple
+PrivateTmp=yes
+User=root
+Group=root
+Restart=on-failure
+RestartSec=30
+
+ExecStart=/bin/sh -c 'service hadoop-yarn-resourcemanager start'
+ExecStop=/bin/sh -c 'service hadoop-yarn-resourcemanager stop'
+PIDFile=/var/run/hadoop/yarn/yarn-yarn-resourcemanager.pid
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,19 @@
+[Unit]
+Description=hadoop hdfs datanode
+Requires=network.target
+After=network.target
+
+[Service]
+Type=simple
+PrivateTmp=yes
+User=root
+Group=root
+Restart=on-failure
+RestartSec=30
+
+ExecStart=/bin/sh -c 'service hadoop-hdfs-datanode start'
+ExecStop=/bin/sh -c 'service hadoop-hdfs-datanode stop'
+PIDFile=/var/run/hadoop/hdfs/hadoop-hdfs-datanode.pid
+
+[Install]
+WantedBy=multi-user.target

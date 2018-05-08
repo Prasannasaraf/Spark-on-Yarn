@@ -1,0 +1,19 @@
+[Unit]
+Description=yarn nodemanager service
+Requires=network.target
+After=network.target
+
+[Service]
+Type=simple
+PrivateTmp=yes
+User=root
+Group=root
+Restart=on-failure
+RestartSec=30
+
+ExecStart=/bin/sh -c 'service hadoop-yarn-nodemanager start'
+ExecStop=/bin/sh -c 'service hadoop-yarn-nodemanager stop'
+PIDFile=/var/run/hadoop/yarn/yarn-yarn-nodemanager.pid
+
+[Install]
+WantedBy=multi-user.target
