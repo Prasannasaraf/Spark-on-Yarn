@@ -14,11 +14,11 @@ To destroy the cluster
 ## To View Web Interfaces Hosted on this Cluster
 
 Append the following in /etc/hosts file
-
+```
 192.168.33.43        local-spark-cluster-master.org.local local-spark-cluster-master
 192.168.33.44        local-spark-cluster-slave01.org.local local-spark-cluster-slave01
 192.168.33.45        local-spark-cluster-slave02.org.local local-spark-cluster-slave02
-
+```
 |Machine|Name of interface|URI|
 |-------|-----------------|---|
 |Master|YARN ResourceManager|	http://local-spark-cluster-master.org.local:8088/|
