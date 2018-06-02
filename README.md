@@ -42,3 +42,13 @@ Master
 Slave
   1. HDFS Datanode
   1. YARN Nodemanager
+  
+## Submit Spark application
+Login to master machine  
+  ```vagrant ssh master\n```
+  
+Login as hdfs user  
+  ```sudo su - hdfs```  
+  
+Spark submit  
+  ```spark-submit --class org.apache.spark.examples.SparkPi --master yarn --deploy-mode cluster --executor-memory 1G /usr/hdp/2.6.3.0-235/spark2/examples/jars/spark-examples_2.11-2.2.0.2.6.3.0-235.jar```
